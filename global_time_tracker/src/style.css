@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: #ececec;
+  background-color: #20252a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,84 +13,91 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  background: #20252a;
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2.5rem 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+/* Remove Vite demo styles, reset for our app */
+a, .logo, .card, .read-the-docs, h1 {
+  all: unset;
 }
 
-.card {
-  padding: 2em;
+input, select, button {
+  outline: none;
+  box-shadow: none;
 }
 
-.read-the-docs {
-  color: #888;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
+
+::-webkit-input-placeholder { color: #7c879c; }
+::-moz-placeholder { color: #7c879c; }
+:-ms-input-placeholder { color: #7c879c; }
+::placeholder { color: #7c879c; }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border-radius: 7px;
+  border: none;
+  padding: 0.6em 1.05em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #3498DB;
+  color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: filter 0.18s;
+  margin: 0 0.3em;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:hover, button:focus {
+  filter: brightness(1.2);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+input, select {
+  border-radius: 6px;
+  padding: 0.55em 0.7em;
+  border: 1px solid #323942;
+  font-size: 1em;
+  background: #222930;
+  color: #ececec;
+  margin: 0 0.25em 0.65em 0;
+}
+
+@media (max-width: 900px) {
+  #app {
+    max-width: 98vw;
+    padding: 1.4rem 0.5rem;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333945;
+  margin: 2.1em 0;
+}
+
+/* Remove input autofill styles in Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+@media (max-width: 780px) {
+  .worldClocksBox {
+    flex-direction: column !important;
+    gap: 1.1em !important;
   }
 }
